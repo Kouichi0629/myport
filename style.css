@@ -1,0 +1,440 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+body {
+  background-color: rgb(250, 250, 250);
+  font-family: Verdana, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* ヘッダーのメニュー */
+header {
+  height: 65px;
+  width: 100%;
+  padding-left: 90px;
+  padding-right: 90px;
+  background-color: rgba(192, 240, 250, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  line-height: 65px;
+  font-size: 30px;
+  font-family: fantasy;
+  color: rgb(85, 147, 185);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+/* .header-left {
+  float: left;
+} */
+
+.logo {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.logo::after {
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #2196f3;
+  transition: all 0.3s ease 0s;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.logo:hover::after {
+  width: 100%;
+}
+
+/* .header-right {
+  float: right;
+  
+} */
+
+.header-right a {
+  /* float: right; */
+  line-height: 65px;
+  padding: 0 25px;
+  color: rgb(85, 147, 185);
+  display: block;
+}
+/* ホバー時に回転 */
+.login {
+  display: inline-block;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+.login span {
+  display: inline-block;
+  position: relative;
+  padding: 0.1em 0.3em;
+  transition: 0.4s;
+  transform-origin: 50% 0%;
+  transform-style: preserve-3d;
+}
+.login span:after {
+  display: inline-block;
+  position: absolute;
+  padding: 0.1em 0.3em;
+  left: 0;
+  top: 0;
+  content: attr(data-text);
+  color: #fff;
+  background-color: #00acc1;
+  transform-origin: 50% 0%;
+  transform: translate3d(0, 105%, 0) rotateX(-90deg);
+}
+.login:hover span {
+  background-color: #00acc1;
+  transform: translate3d(0, 0, -30px) rotateX(90deg);
+}
+
+/* KOUICHIページここから----------------------------------------------------------------------------- */
+.top-text {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.main-text {
+  /* overflow: hidden; */
+  background-image: url(jpg素材/sky2.jpg);
+  width: 100%;
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 65px;
+  margin-bottom: 5px;
+}
+.top-text h1 {
+  margin-top: 80px;
+  opacity: 0.9;
+  font-size: 50px;
+  letter-spacing: 20px;
+  text-align: center;
+}
+.top-text h2 {
+  font-size: 35px;
+  text-align: center;
+  opacity: 0.9;
+}
+.top-text h3 {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  font-size: 22px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.btn-link {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  padding: 8px 2.4px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-bottom: 100px;
+}
+.btn:hover {
+  opacity: 1;
+}
+
+.line {
+  background: chartreuse;
+  width: 130px;
+}
+.facebook {
+  background: #3b5998;
+  width: 130px;
+  margin-left: 10px;
+}
+.fab {
+  margin-right: 20px;
+}
+
+.top-text p {
+  color: rgb(85, 147, 185);
+  opacity: 1;
+}
+
+.aside-text {
+  overflow: auto;
+  margin-top: 65px;
+  font-size: 15px;
+}
+.aside-text h3 {
+  color: rgb(85, 147, 185);
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.aside-text p {
+  clear: both;
+  width: 210px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* contactのページここから */
+.contact-text {
+  max-width: 100%;
+  text-align: center;
+}
+.contact-text {
+  background-image: url(jpg素材/sky-2546570_1920.jpg);
+  background-color: rgb(192, 199, 130);
+  background-blend-mode: hard-light;
+  background-size: cover;
+  height: 670px;
+  margin: 0 auto;
+}
+/* CONTACT文字の装飾 */
+.main-contact {
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  opacity: 0.6;
+  font-size: 25px;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+/* フォームの装飾 */
+form div {
+  margin-bottom: 14px;
+}
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  background: rgba(95, 148, 245, 0.6);
+  border: 1px rgb(80, 109, 189) solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+/* aboutページここから */
+.about-text {
+  background-image: url(jpg素材/sky-2546570_1920.jpg);
+  background-color: rgb(243, 185, 182);
+  background-blend-mode: hard-light;
+  background-size: cover;
+  max-width: 100%;
+  /* height: 670px; */
+  margin: 0 auto;
+}
+.main-about {
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  opacity: 0.6;
+  font-size: 25px;
+  letter-spacing: 20px;
+  text-align: center;
+}
+/* 画像を均等に並べる */
+.item img {
+  /* margin-left: 20px; */
+  width: 250px;
+  height: 250px;
+}
+.item p {
+  margin-left: 20px;
+}
+.img {
+  display: flex;
+  justify-content: center;
+}
+
+/* 仕事ページここから--------------------------------------- */
+.top-wrapper {
+  /* display: block;
+  margin: 0 auto;
+  clear: both; */
+  width: 100%;
+  height: 500px;
+  background-image: url(jpg素材/park-4546344_1920.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: rgb(85, 147, 185);
+}
+.container1 h1 {
+  font-size: 50px;
+  padding-top: 70px;
+  letter-spacing: 20px;
+  text-align: center;
+}
+.containers p {
+  color: #fff;
+  margin-top: 30px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* 真ん中画像の無ここから---------------------------- */
+.work-wrapper {
+  /* height:500px; */
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.heading {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: #5f5d60;
+}
+.heading h2 {
+  font-weight: normal;
+}
+.works {
+  display: flex;
+  justify-content: space-between;
+}
+/* .work {
+  float: left;
+  width: 25%;
+} */
+.work-icon {
+  position: relative;
+}
+.work-icon p {
+  position: absolute;
+  top: 230px;
+  width: 100%;
+  color: white;
+}
+.text-work {
+  width: 80%;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #5f5d60;
+}
+/* ボタンの装飾 */
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.message {
+  background: #5dca88;
+  padding: 15px 40px;
+  cursor: pointer;
+  box-shadow: 0px 7px #1a7940;
+}
+/* クリックされたときの処理 */
+.message:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
+}
+.heading h3 {
+  font-weight: normal;
+}
+footer {
+  max-width: 100%;
+  height: 50px;
+  background-color: rgba(192, 240, 250, 0.9);
+}
+.footer-text {
+  display: block;
+}
+
+.footer-text p {
+  color: #2196f3;
+  font-size: 12px;
+  padding-top: 20px;
+  text-align: center;
+}
+.footer-text span {
+  color: black;
+}
+
+/* タブレット向けレイアウト------------------------------------*/
+@media all and (max-width: 1024px) {
+  header {
+    width: 100%;
+  }
+
+  .works {
+    flex-direction: column;
+  }
+  .text-work {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .img {
+    flex-direction: column;
+  }
+
+  .item {
+    text-align: center;
+    /* display: block;
+  margin: 0 auto; */
+    /* margin-left: 400px; */
+  }
+  .item p {
+    margin: 0 auto;
+    /* margin-left: 400px; */
+  }
+}
+
+/* モバイル向けレイアウト */
+@media all and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  .top-text h1 {
+    font-size: 35px;
+  }
+  .top-text {
+    display: block;
+  }
+  .aside-text {
+    text-align: center;
+  }
+  main {
+    overflow: hidden;
+  }
+}

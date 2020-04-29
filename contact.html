@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="http://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>contact-from</title>
+    <link rel="icon" href="png素材/Myico.png" />
+    <meta name="descripsion" content="お問合せページ" />
+  </head>
+
+  <body>
+    <!-- ヘッダーはここから -->
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <a href="index.html" class="logo"> Kouichi</a>
+        </div>
+        <div class="header-right">
+          <!-- <a href="contact.html" class="login"><span data-text="CONTACT">CONTACT</span></a>
+            <a href="work.html" class="login"><span data-text="WORK">WORK</span></a>
+            <a href="about.html" class="login"><span data-text="ABOUT">ABOUT</span></a> -->
+        </div>
+      </div>
+    </header>
+
+    <!-- メイン画像と文字 -->
+    <div class="contact-text">
+      <div class="main-contact">
+        <h1>CONTACT</h1>
+      </div>
+      <form action="#">
+        <div>
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="your-name" />
+        </div>
+        <div>
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="your-email" />
+        </div>
+        <div>
+          <label for="message">メッセージ</label>
+          <textarea id="message" name="your-message"></textarea>
+        </div>
+
+        <input type="submit" class="button" value="送信" />
+      </form>
+    </div>
+  </body>
+</html>
